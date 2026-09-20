@@ -1,33 +1,210 @@
 
+/* ========================================
+   SIGN IN PAGE
+======================================== */
+
+.auth-page {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 20px;
+    background: var(--cream);
+}
+
+/* Main authentication card */
+.auth-card {
+    width: 100%;
+    max-width: 460px;
+    padding: 42px 38px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: 0 15px 45px rgba(33, 27, 27, 0.10);
+    animation: fadeUp 0.7s ease both;
+}
+
+/* Heading */
+.auth-card h1 {
+    margin-bottom: 10px;
+    color: var(--dark);
+    font-size: 2rem;
+    text-align: center;
+}
+
+.auth-card > p {
+    margin-bottom: 30px;
+    color: var(--muted);
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* Form layout */
+.auth-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Form group */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    color: var(--dark);
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+/* Input fields */
+.form-group input {
+    width: 100%;
+    padding: 14px 15px;
+    color: var(--dark);
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    outline: none;
+    font-family: inherit;
+    font-size: 0.95rem;
+    transition: border-color 0.25s ease,
+                box-shadow 0.25s ease,
+                background 0.25s ease;
+}
+
+.form-group input:focus {
+    background: var(--white);
+    border-color: var(--red);
+    box-shadow: 0 0 0 4px rgba(139, 0, 0, 0.10);
+}
+
+.form-group input::placeholder {
+    color: #a49a9a;
+}
+
+/* Remember me and forgot password */
 .form-row {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 10px;
-    margin-top: 15px;
+    gap: 12px;
+    margin-top: -4px;
 }
 
-.form-row .check-row {
-    margin: 0;
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--muted);
+    font-size: 0.85rem;
 }
 
-.form-row > a {
+.remember-me input {
+    accent-color: var(--red);
+    cursor: pointer;
+}
+
+.forgot-password {
     color: var(--red);
-    font-size: 13px;
+    font-size: 0.85rem;
     font-weight: 600;
+    text-decoration: none;
+    transition: color 0.25s ease;
 }
 
-.form-row > a:hover {
+.forgot-password:hover {
+    color: var(--red-light);
     text-decoration: underline;
 }
 
-.auth-card form .btn {
-    margin-top: 20px;
+/* Sign in button */
+.auth-card .btn {
+    width: 100%;
+    margin-top: 8px;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 9px;
+    background: var(--red);
+    color: var(--white);
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.25s ease,
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
 }
 
-@media (max-width: 450px) {
-    .form-row {
-        flex-direction: column;
-        align-items: flex-start;
+.auth-card .btn:hover {
+    background: var(--red-light);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(139, 0, 0, 0.22);
+}
+
+.auth-card .btn:active {
+    transform: translateY(-1px);
+}
+
+/* Sign up redirect */
+.auth-switch {
+    margin-top: 26px;
+    color: var(--muted);
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.auth-switch a {
+    color: var(--red);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.auth-switch a:hover {
+    color: var(--red-light);
+    text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 500px) {
+    .auth-page {
+        padding: 40px 16px;
     }
+
+    .auth-card {
+        padding: 32px 22px;
+        border-radius: 14px;
+    }
+
+    .auth-card h1 {
+        font-size: 1.7rem;
+    }
+
+    .form-row {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .forgot-password {
+        margin-top: 2px;
+    }
+}/* Rounded email and password inputs */
+.auth-card input[type="email"],
+.auth-card input[type="password"] {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid var(--border);
+    border-radius: 12px !important;
+    background: var(--cream);
+    outline: none;
+    transition: all 0.25s ease;
+}
+
+.auth-card input[type="email"]:focus,
+.auth-card input[type="password"]:focus {
+    border-color: var(--red);
+    border-radius: 12px !important;
+    box-shadow: 0 0 0 4px rgba(139, 0, 0, 0.10);
 }

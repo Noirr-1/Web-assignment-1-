@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Noir N</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="container nav-container">
+        <a href="index.html" class="logo">Noir N.</a>
+
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="signup.html">Sign Up</a>
+            <a href="signin.html" class="nav-button">Sign In</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+<section class="page-banner">
+    <div class="container">
+        <p class="eyebrow">LET'S CONNECT</p>
+        <h1>Have a question?</h1>
+        <p>Send us a message and our team will get back to you.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container contact-layout">
+
+        <div class="contact-info">
+            <h2>Reach out to Noir N</h2>
+            <p>
+                Whether you are a freelancer, client, or
+                curious visitor, we would love to hear from you.
+            </p>
+
+            <div class="contact-detail">
+                <span class="icon">✉</span>
+                <div>
+                    <h3>Email</h3>
+                    <p>moizmustfa8@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="contact-detail">
+                <span class="icon">◷</span>
+                <div>
+                    <h3>Availability</h3>
+                    <p>Monday–Friday, 9 AM–6 PM</p>
+                </div>
+            </div>
+
+            <div class="contact-detail">
+                <span class="icon">◆</span>
+                <div>
+                    <h3>Community</h3>
+                    <p>Built for creators everywhere.</p>
+                </div>
+            </div>
+        </div>
+
+        <form
+            class="form-card"
+            action="https://formspree.io/f/xwlpvjqy"
+            method="POST"
+        >
+
+            <h2>Send a Message</h2>
+
+            <label for="name">Full Name</label>
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your full name"
+                minlength="2"
+                required
+            >
+
+            <label for="email">Email Address</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="you@example.com"
+                required
+            >
+
+            <label for="subject">Subject</label>
+            <input
+                type="text"
+                id="subject"
+                name="subject"
+                placeholder="How can we help?"
+                required
+            >
+
+            <label for="message">Message</label>
+            <textarea
+                id="message"
+                name="message"
+                rows="6"
+                minlength="10"
+                placeholder="Write your message..."
+                required
+            ></textarea>
+
+            <button class="btn btn-primary" type="submit">
+                Send Message
+            </button>
+
+        </form>
+
+    </div>
+</section>
+
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <h3>Noir N.</h3>
+                <p>A modern space for freelancers and clients.</p>
+            </div>
+
+            <div>
+                <h4>Navigation</h4>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+
+            <div>
+                <h4>Account</h4>
+                <div class="footer-links">
+                    <a href="signup.html">Sign Up</a>
+                    <a href="signin.html">Sign In</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Noir N. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

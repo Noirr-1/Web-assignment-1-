@@ -1,0 +1,40 @@
+
+.timeline {
+    max-width: 850px;
+    margin: auto;
+}
+
+.timeline-item {
+    display: flex;
+    gap: 25px;
+    padding: 25px 0;
+    border-bottom: 1px solid var(--border);
+    animation: slideIn 0.7s ease both;
+}
+
+.timeline-item > span {
+    background: var(--red);
+    color: white;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.timeline-item h3 {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.timeline-item p {
+    color: var(--muted);
+}
+
+.timeline-item:hover > span {
+    background: var(--red-light);
+    transform: scale(1.08);
+}

@@ -1,0 +1,727 @@
+
+/* =========================================
+   NOIR N.
+   LAB 04 CSS
+========================================= */
+
+
+/* =========================================
+   SEARCH PANEL
+========================================= */
+
+.search-panel {
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 16px;
+
+    padding: 22px;
+
+    display: grid;
+
+    grid-template-columns:
+        2fr
+        repeat(5, 1fr);
+
+    gap: 12px;
+
+    margin-bottom: 35px;
+}
+
+
+.search-panel input,
+.search-panel select,
+.form-group input,
+.form-group select {
+
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 7px;
+
+    background: white;
+
+    color: var(--dark);
+
+    font-family: 'DM Sans', sans-serif;
+
+    outline: none;
+
+    transition: 0.3s ease;
+
+    box-sizing: border-box;
+}
+
+
+.search-panel input:focus,
+.search-panel select:focus,
+.form-group input:focus,
+.form-group select:focus {
+
+    border-color: var(--red);
+
+    box-shadow:
+        0 0 0 3px #8b00001a;
+}
+
+
+/* =========================================
+   ADD FREELANCER BOX
+========================================= */
+
+.add-box {
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 16px;
+
+    padding: 30px;
+
+    margin-bottom: 55px;
+}
+
+
+.add-box h3 {
+
+    font-size: 28px;
+
+    margin: 7px 0;
+}
+
+
+.add-box p:not(.eyebrow) {
+
+    color: var(--muted);
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.form-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 22px;
+}
+
+
+.form-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.form-group label {
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   DIRECTORY HEADER
+========================================= */
+
+.directory-header {
+
+    display: flex;
+
+    align-items: end;
+
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+}
+
+
+.directory-header h2 {
+
+    font-size: 40px;
+
+    margin-top: 8px;
+}
+
+
+#resultCount {
+
+    background: #f4e4dc;
+
+    color: var(--red);
+
+    padding: 8px 14px;
+
+    border-radius: 30px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   FREELANCER GRID
+========================================= */
+
+.freelancer-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+
+/* =========================================
+   FREELANCER CARD
+========================================= */
+
+.freelancer-card {
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    padding: 25px;
+
+    transition: 0.3s ease;
+
+    position: relative;
+}
+
+
+.freelancer-card:hover {
+
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 15px 30px #4b191412;
+
+    border-color: #d4aaa0;
+}
+
+
+/* CARD TOP */
+
+.card-top {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 18px;
+}
+
+
+/* AVATAR */
+
+.avatar {
+
+    width: 55px;
+
+    height: 55px;
+
+    min-width: 55px;
+
+    border-radius: 50%;
+
+    background: var(--red);
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 21px;
+
+    font-weight: 700;
+}
+
+
+/* NAME */
+
+.freelancer-card h3 {
+
+    font-size: 22px;
+
+    margin-bottom: 2px;
+}
+
+
+.skill {
+
+    color: var(--muted);
+
+    font-size: 14px;
+}
+
+
+/* CATEGORY */
+
+.category-badge {
+
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    background: #f4e4dc;
+
+    color: var(--red);
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+/* DETAILS */
+
+.freelancer-details {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+}
+
+
+.detail {
+
+    background: #fbf6ef;
+
+    padding: 10px;
+
+    border-radius: 8px;
+}
+
+
+.detail span {
+
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 11px;
+
+    margin-bottom: 2px;
+}
+
+
+.detail strong {
+
+    font-size: 13px;
+}
+
+
+.rating {
+
+    color: var(--red);
+
+    font-weight: 700;
+}
+
+
+.available {
+
+    color: #247a3b;
+}
+
+
+.busy {
+
+    color: var(--red);
+}
+
+
+/* =========================================
+   CARD BUTTONS
+========================================= */
+
+.card-actions {
+
+    display: flex;
+
+    gap: 9px;
+}
+
+
+.card-actions button {
+
+    flex: 1;
+
+    padding: 9px 12px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    font-family: 'DM Sans', sans-serif;
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+
+.edit-btn {
+
+    background: transparent;
+
+    border: 1px solid var(--red);
+
+    color: var(--red);
+}
+
+
+.edit-btn:hover {
+
+    background: var(--red);
+
+    color: white;
+}
+
+
+.delete-btn {
+
+    background: var(--red);
+
+    border: 1px solid var(--red);
+
+    color: white;
+}
+
+
+.delete-btn:hover {
+
+    opacity: 0.85;
+}
+
+
+/* =========================================
+   EMPTY MESSAGE
+========================================= */
+
+.empty-message {
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+}
+
+
+.empty-message h3 {
+
+    font-size: 25px;
+
+    margin-bottom: 8px;
+}
+
+
+.empty-message p {
+
+    color: var(--muted);
+}
+
+
+/* =========================================
+   EDIT MODAL
+========================================= */
+
+.modal {
+
+    display: none;
+
+    position: fixed;
+
+    z-index: 1000;
+
+    inset: 0;
+
+    background: #211b1bcc;
+
+    padding: 30px;
+
+    overflow-y: auto;
+}
+
+
+.modal.active {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.modal-content {
+
+    width: min(550px, 100%);
+
+    background: var(--cream);
+
+    border-radius: 16px;
+
+    padding: 30px;
+
+    box-shadow:
+        0 25px 70px #00000040;
+}
+
+
+.modal-header {
+
+    display: flex;
+
+    align-items: start;
+
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+}
+
+
+.modal-header h2 {
+
+    font-size: 30px;
+
+    margin-top: 5px;
+}
+
+
+.close-btn {
+
+    width: 35px;
+
+    height: 35px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #f0e2d9;
+
+    color: var(--red);
+
+    font-size: 25px;
+
+    cursor: pointer;
+}
+
+
+.close-btn:hover {
+
+    background: var(--red);
+
+    color: white;
+}
+
+
+.modal-content .form-group {
+
+    margin-bottom: 16px;
+}
+
+
+.modal-actions {
+
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 25px;
+}
+
+
+/* =========================================
+   LOGIC SECTION
+========================================= */
+
+.logic-section {
+
+    margin-top: 80px;
+
+    padding-top: 60px;
+
+    border-top: 1px solid var(--border);
+}
+
+
+.logic-box {
+
+    background: var(--dark);
+
+    color: white;
+
+    border-radius: 14px;
+
+    padding: 22px;
+
+    margin-bottom: 30px;
+
+    min-height: 70px;
+}
+
+
+.logic-item {
+
+    padding: 10px 0;
+
+    border-bottom: 1px solid #ffffff1a;
+}
+
+
+.logic-item:last-child {
+
+    border-bottom: none;
+}
+
+
+.logic-item strong {
+
+    color: #f2c5b5;
+}
+
+
+.logic-title {
+
+    margin-top: 35px;
+
+    margin-bottom: 12px;
+}
+
+
+.logic-title h3 {
+
+    font-size: 25px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .search-panel {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .search-panel input {
+
+        grid-column: 1 / -1;
+    }
+
+
+    .freelancer-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .form-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .search-panel {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .search-panel input {
+
+        grid-column: auto;
+    }
+
+
+    .freelancer-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .form-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .directory-header {
+
+        align-items: start;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    .modal {
+
+        padding: 15px;
+    }
+
+
+    .modal-content {
+
+        padding: 22px;
+    }
+}
+

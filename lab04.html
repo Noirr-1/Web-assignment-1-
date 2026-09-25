@@ -1,0 +1,734 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Noir N. | Talent Directory</title>
+
+    <!-- Existing website theme -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Lab 04 CSS -->
+    <link rel="stylesheet" href="css/lab04.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="container nav-container">
+
+            <a href="index.html" class="logo">Noir N.</a>
+
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="lab04.html">Talent</a>
+                <a href="signup.html">Sign Up</a>
+                <a href="signin.html" class="nav-button">Sign In</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- PAGE HEADER -->
+        <section class="page-banner">
+            <div class="container">
+
+                <p class="eyebrow">NOIR N. TALENT DIRECTORY</p>
+
+                <h1>Discover Creative Talent.</h1>
+
+                <p>
+                    Search, add, edit and manage freelancers
+                    using JavaScript.
+                </p>
+
+            </div>
+        </section>
+
+
+        <!-- TALENT SECTION -->
+        <section class="section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p class="eyebrow">EXPLORE TALENT</p>
+
+                    <h2>Find the right freelancer.</h2>
+
+                    <p>
+                        Search and filter professionals according
+                        to their skills, category, experience,
+                        rating and availability.
+                    </p>
+
+                </div>
+
+
+                <!-- SEARCH + FILTERS -->
+                <div class="search-panel">
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search freelancer, skill or category..."
+                    >
+
+                    <select id="categoryFilter">
+
+                        <option value="all">
+                            All Categories
+                        </option>
+
+                        <option value="Design">
+                            Design
+                        </option>
+
+                        <option value="Development">
+                            Development
+                        </option>
+
+                        <option value="Writing">
+                            Writing
+                        </option>
+
+                        <option value="Marketing">
+                            Marketing
+                        </option>
+
+                        <option value="Video">
+                            Video
+                        </option>
+
+                    </select>
+
+
+                    <select id="experienceFilter">
+
+                        <option value="all">
+                            All Experience
+                        </option>
+
+                        <option value="Beginner">
+                            Beginner
+                        </option>
+
+                        <option value="Intermediate">
+                            Intermediate
+                        </option>
+
+                        <option value="Expert">
+                            Expert
+                        </option>
+
+                    </select>
+
+
+                    <select id="ratingFilter">
+
+                        <option value="all">
+                            All Ratings
+                        </option>
+
+                        <option value="5">
+                            5 Stars
+                        </option>
+
+                        <option value="4">
+                            4+ Stars
+                        </option>
+
+                        <option value="3">
+                            3+ Stars
+                        </option>
+
+                    </select>
+
+
+                    <select id="availabilityFilter">
+
+                        <option value="all">
+                            All Availability
+                        </option>
+
+                        <option value="Available">
+                            Available
+                        </option>
+
+                        <option value="Busy">
+                            Busy
+                        </option>
+
+                    </select>
+
+
+                    <select id="sortFilter">
+
+                        <option value="default">
+                            Sort By
+                        </option>
+
+                        <option value="ratingHigh">
+                            Highest Rating
+                        </option>
+
+                        <option value="ratingLow">
+                            Lowest Rating
+                        </option>
+
+                        <option value="nameAZ">
+                            Name A-Z
+                        </option>
+
+                        <option value="nameZA">
+                            Name Z-A
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- ADD FREELANCER -->
+                <div class="add-box">
+
+                    <p class="eyebrow">CREATE</p>
+
+                    <h3>Add a New Freelancer</h3>
+
+                    <p>
+                        Add a new professional to the Noir N.
+                        talent directory.
+                    </p>
+
+
+                    <form id="freelancerForm">
+
+                        <div class="form-grid">
+
+                            <div class="form-group">
+
+                                <label for="name">
+                                    Full Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="name"
+                                    placeholder="e.g. Ali Khan"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="skill">
+                                    Main Skill
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="skill"
+                                    placeholder="e.g. UI/UX Designer"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="category">
+                                    Category
+                                </label>
+
+                                <select id="category" required>
+
+                                    <option value="">
+                                        Select Category
+                                    </option>
+
+                                    <option value="Design">
+                                        Design
+                                    </option>
+
+                                    <option value="Development">
+                                        Development
+                                    </option>
+
+                                    <option value="Writing">
+                                        Writing
+                                    </option>
+
+                                    <option value="Marketing">
+                                        Marketing
+                                    </option>
+
+                                    <option value="Video">
+                                        Video
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="experience">
+                                    Experience
+                                </label>
+
+                                <select id="experience" required>
+
+                                    <option value="">
+                                        Select Experience
+                                    </option>
+
+                                    <option value="Beginner">
+                                        Beginner
+                                    </option>
+
+                                    <option value="Intermediate">
+                                        Intermediate
+                                    </option>
+
+                                    <option value="Expert">
+                                        Expert
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="rating">
+                                    Rating
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="rating"
+                                    min="1"
+                                    max="5"
+                                    step="0.1"
+                                    placeholder="4.5"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="availability">
+                                    Availability
+                                </label>
+
+                                <select
+                                    id="availability"
+                                    required
+                                >
+
+                                    <option value="Available">
+                                        Available
+                                    </option>
+
+                                    <option value="Busy">
+                                        Busy
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary"
+                        >
+                            + Add Freelancer
+                        </button>
+
+                    </form>
+
+                </div>
+
+
+                <!-- FREELANCER LIST -->
+                <div class="directory-header">
+
+                    <div>
+
+                        <p class="eyebrow">
+                            TALENT
+                        </p>
+
+                        <h2>
+                            Freelancers
+                        </h2>
+
+                    </div>
+
+                    <span id="resultCount">
+                        0 freelancers
+                    </span>
+
+                </div>
+
+
+                <div
+                    id="freelancerContainer"
+                    class="freelancer-grid"
+                ></div>
+
+
+                <div
+                    id="emptyMessage"
+                    class="empty-message"
+                    style="display: none;"
+                >
+
+                    <h3>
+                        No freelancers found.
+                    </h3>
+
+                    <p>
+                        Try changing your search or filters.
+                    </p>
+
+                </div>
+
+
+                <!-- LOOP / CONDITION OUTPUT -->
+                <div class="logic-section">
+
+                    <div class="section-heading">
+
+                        <p class="eyebrow">
+                            JAVASCRIPT LOGIC
+                        </p>
+
+                        <h2>
+                            Project Processing
+                        </h2>
+
+                    </div>
+
+
+                    <div class="logic-title">
+                        <h3>For Loop</h3>
+                    </div>
+
+                    <div
+                        id="forLoopOutput"
+                        class="logic-box"
+                    ></div>
+
+
+                    <div class="logic-title">
+                        <h3>While Loop</h3>
+                    </div>
+
+                    <div
+                        id="whileLoopOutput"
+                        class="logic-box"
+                    ></div>
+
+
+                    <div class="logic-title">
+                        <h3>Loop + Conditions</h3>
+                    </div>
+
+                    <div
+                        id="conditionOutput"
+                        class="logic-box"
+                    ></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- EDIT MODAL -->
+    <div
+        id="editModal"
+        class="modal"
+    >
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <div>
+
+                    <p class="eyebrow">
+                        EDIT PROFILE
+                    </p>
+
+                    <h2>
+                        Update Freelancer
+                    </h2>
+
+                </div>
+
+                <button
+                    type="button"
+                    id="closeModal"
+                    class="close-btn"
+                >
+                    &times;
+                </button>
+
+            </div>
+
+
+            <form id="editForm">
+
+                <input
+                    type="hidden"
+                    id="editId"
+                >
+
+
+                <div class="form-group">
+
+                    <label for="editName">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="editName"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="editSkill">
+                        Main Skill
+                    </label>
+
+                    <input
+                        type="text"
+                        id="editSkill"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="editCategory">
+                        Category
+                    </label>
+
+                    <select
+                        id="editCategory"
+                        required
+                    >
+
+                        <option value="Design">
+                            Design
+                        </option>
+
+                        <option value="Development">
+                            Development
+                        </option>
+
+                        <option value="Writing">
+                            Writing
+                        </option>
+
+                        <option value="Marketing">
+                            Marketing
+                        </option>
+
+                        <option value="Video">
+                            Video
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="editExperience">
+                        Experience
+                    </label>
+
+                    <select
+                        id="editExperience"
+                        required
+                    >
+
+                        <option value="Beginner">
+                            Beginner
+                        </option>
+
+                        <option value="Intermediate">
+                            Intermediate
+                        </option>
+
+                        <option value="Expert">
+                            Expert
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="editRating">
+                        Rating
+                    </label>
+
+                    <input
+                        type="number"
+                        id="editRating"
+                        min="1"
+                        max="5"
+                        step="0.1"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="editAvailability">
+                        Availability
+                    </label>
+
+                    <select
+                        id="editAvailability"
+                        required
+                    >
+
+                        <option value="Available">
+                            Available
+                        </option>
+
+                        <option value="Busy">
+                            Busy
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="modal-actions">
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary"
+                    >
+                        Update
+                    </button>
+
+                    <button
+                        type="button"
+                        id="cancelEdit"
+                        class="btn btn-outline"
+                    >
+                        Cancel
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div>
+
+                    <h3>
+                        Noir N.
+                    </h3>
+
+                    <p>
+                        A modern space for freelancers
+                        and clients.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <h4>
+                        Navigation
+                    </h4>
+
+                    <div class="footer-links">
+
+                        <a href="index.html">
+                            Home
+                        </a>
+
+                        <a href="about.html">
+                            About
+                        </a>
+
+                        <a href="contact.html">
+                            Contact
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- LAB 04 JAVASCRIPT -->
+    <script src="js/lab04.js"></script>
+
+</body>
+
+</html>
+
